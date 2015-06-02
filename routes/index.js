@@ -3,6 +3,7 @@
 
 module.exports = {
   // route : handler
-  'get /sample': 'index',
-  'get /sample/:id': 'get'
+  'get /cbs': 'index',
+  'get /cbs/:id': 'get',
+  'get /cbs/:id/FeatureServer': 'featureserver'
 }

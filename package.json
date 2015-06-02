@@ -10,9 +10,9 @@
     "test": "mocha test/"
   },
   "dependencies": {
-    "koop-server": "*",
     "config": "~0.4.35",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+    "request": "~2.48.0"
   },
   "author": "Chris Helm",
   "license": "BSD-2-Clause",
@@ -23,6 +23,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com:chelm/koop-sample-provider.git"
+    "url": "https://github.com/PeaceNlove/koop-nl-cbs.git"
   }
 }
