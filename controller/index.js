@@ -12,7 +12,7 @@ var Controller = function( CBS, BaseController ){
 
   // get a resource from the providers model 
   controller.get = function(req, res){
-    CBS.find(req.params.id, req.query, function(err, data){
+    CBS.find(req.params.id, req.params.time, req.query, function(err, data){
       if (err){
         res.send(err, 500);
       } else {
@@ -26,7 +26,7 @@ var Controller = function( CBS, BaseController ){
     var callback = req.query.callback, self = this;
     delete req.query.callback;
 
-    CBS.find(req.params.id, req.query, function(err, data){
+    CBS.find(req.params.id, req.params.time, req.query, function(err, data){
       if (err) {
         res.send(err, 500);
       } else {
