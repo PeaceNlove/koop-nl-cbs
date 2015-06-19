@@ -14,7 +14,11 @@ var CBS = function(koop){
     }
   });
   cbs.find = function( id, time, options, callback ){
-
+	
+	if (id===undefined || time===undefined){
+		callback("Id or time not defined", null);	
+	}
+	else{
     var type = 'CBS';
     var cacheId = id+":"+time;
     // check the cache for data with this type & id 
@@ -75,7 +79,9 @@ var CBS = function(koop){
       } else {
         callback( null, entry );
       }
+	
     });
+	}
   };
   // drops the item from the cache
   cbs.drop = function( id, options, callback ){
